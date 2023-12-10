@@ -1,0 +1,2 @@
+ALTER TABLE menus
+    ADD title VARCHAR(100) DEFAULT NULL;

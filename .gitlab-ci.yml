@@ -1,0 +1,37 @@
+# image: debian
+
+# before_script:
+#   - apt-get update
+#   - apt-get install -y curl sudo
+#   - curl -s https://packagecloud.io/install/repositories/golang-migrate/migrate/script.deb.sh | sudo bash
+#   - apt-get install -y migrate
+
+# stages:
+#   - build
+
+# # dev
+# build-dev:
+#   stage: build
+#   script:
+#     - echo ---- start migrate main ----
+#     - migrate -database "postgresql://${POSTGRES_USERNAME_DEV}:${POSTGRES_PASSWORD_DEV}@${POSTGRES_HOST_DEV}:${POSTGRES_PORT}/${POSTGRES_MAIN_DATABASE}?sslmode=verify-full&sslrootcert=global-bundle.pem" -path "./db/main" up
+#     - echo ---- end migrate integration ----
+
+#     - echo ---- start migrate main ----
+#     - migrate -database "postgresql://${POSTGRES_USERNAME_DEV}:${POSTGRES_PASSWORD_DEV}@${POSTGRES_HOST_DEV}:${POSTGRES_PORT}/${POSTGRES_INTEGRATION_DATABASE}?sslmode=verify-full&sslrootcert=global-bundle.pem" -path "./db/integration" up
+#     - echo ---- end migrate integration ----
+#   only:
+#     - dev
+
+# build-prod:
+#   stage: build
+#   script:
+#     - echo ---- start migrate main ----
+#     - migrate -database "postgresql://${POSTGRES_USERNAME}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_MAIN_DATABASE}?sslmode=verify-full&sslrootcert=global-bundle.pem" -path "./db/main" up
+#     - echo ---- end migrate integration ----
+
+#     - echo ---- start migrate main ----
+#     - migrate -database "postgresql://${POSTGRES_USERNAME}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_INTEGRATION_DATABASE}?sslmode=verify-full&sslrootcert=global-bundle.pem" -path "./db/integration" up
+#     - echo ---- end migrate integration ----
+#   only:
+#     - prod
