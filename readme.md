@@ -13,14 +13,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/bisalive/bisalive-store-db-migration.git
+git remote add origin https://github.com/therohim/pcs-db-migration.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/bisalive/bisalive-store-db-migration/-/settings/integrations)
+- [ ] [Set up project integrations](https://github.com/therohim/pcs-db-migration/-/settings/integrations)
 
 ## Collaborate with your team
 
