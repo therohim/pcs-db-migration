@@ -10,13 +10,12 @@ CREATE TABLE IF NOT EXISTS products(
     description TEXT NULL,
     rating FLOAT DEFAULT 0,
     sold INT DEFAULT 0,
+    viewed INT DEFAULT 0,
+    weight INT DEFAULT 0,
     is_active BOOLEAN DEFAULT TRUE,
     created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     deleted_at TIMESTAMP NULL,
     
-    PRIMARY KEY (id),
-
-    FOREIGN KEY (category_id) REFERENCES product_categories(id),
-    FOREIGN KEY (brand_id) REFERENCES product_brands(id)
+    PRIMARY KEY (id)
 );

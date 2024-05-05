@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS admins(
+CREATE TABLE  IF NOT EXISTS admins(
     id int NOT NULL AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(50) NOT NULL,
@@ -14,4 +14,4 @@ CREATE TABLE IF NOT EXISTS admins(
     deleted_at TIMESTAMP NULL,
     
     PRIMARY KEY (id)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;

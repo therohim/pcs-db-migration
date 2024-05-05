@@ -1,1 +1,0 @@
-DROP TABLE IF EXISTS blog_detail_tags;

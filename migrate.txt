@@ -1,0 +1,3 @@
+migrate -database "mysql://root:root@tcp(localhost:3306)/pcs_test?multiStatements=true" -path "./db" up
+
+migrate create -ext sql -dir db alter_table_transaction_add_column_user_id

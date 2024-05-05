@@ -3,6 +3,8 @@ CREATE TABLE IF NOT EXISTS product_details(
     product_id INT default NULL,
     variant_id INT default NULL,
     value VARCHAR(50) default NULL,
+    color VARCHAR(50) default NULL,
+    size VARCHAR(50) default NULL,
     stock INT default NULL,
     price FLOAT default NULL,
     is_active BOOLEAN DEFAULT TRUE,

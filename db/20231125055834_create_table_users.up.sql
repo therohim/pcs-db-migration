@@ -1,11 +1,11 @@
 CREATE TABLE IF NOT EXISTS users(
     id int NOT NULL AUTO_INCREMENT,
     uid VARCHAR(255) NULL,
-    name VARCHAR(255) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    phone VARCHAR(100) NOT NULL,
-    password VARCHAR(100) NOT NULL,
-    keypass VARCHAR(20) NOT NULL,
+    name VARCHAR(255) NULL,
+    email VARCHAR(100) NULL,
+    phone VARCHAR(100) NULL,
+    password varbinary(200) NULL,
+    keypass VARCHAR(20) NULL,
     birthday DATE NULL,
     profile_picture TEXT NULL,
     gender VARCHAR(50) NULL,
@@ -21,5 +21,6 @@ CREATE TABLE IF NOT EXISTS users(
     last_login TIMESTAMP NULL DEFAULT NULL,
     fcm_id_mobile TEXT NULL,
     fcm_id_desktop TEXT NULL,
+    coupon int DEFAULT 0,
     PRIMARY KEY (id)
-);
+)ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;

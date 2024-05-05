@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS user_addresses(
     address text null,
     latitude float null,
     longitude float null,
+    postal_code INT NOT null,
     created_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
     deleted_at TIMESTAMP NULL DEFAULT NULL,
